@@ -12,6 +12,7 @@ def ts_jest_test(
 
     nodejs_test(
         name = name,
+        templated_args = ["--config=$(location @rules_jest//:jest.config.js)"],
         data = data + ["@rules_jest//:jest.config.js"],
         entry_point = jest,
         expected_exit_code = 0,
