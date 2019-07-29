@@ -14,8 +14,7 @@ def ts_jest_test(
         name = name,
         data = data,
         entry_point = jest,
-        testonly = 1,
-        expected_exit_code = "1",
+        expected_exit_code = 0,
         tags = tags,
         node_modules = node_modules,
         **kwargs
