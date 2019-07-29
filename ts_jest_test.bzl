@@ -12,7 +12,7 @@ def ts_jest_test(
 
     nodejs_test(
         name = name,
-        data = data,
+        data = data + [":jest.config.js"],
         entry_point = jest,
         expected_exit_code = 0,
         tags = tags,
