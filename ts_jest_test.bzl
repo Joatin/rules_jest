@@ -3,7 +3,7 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_test")
 
 def _impl(ctx):
     nodejs_test(
-       name = ctx.var.name,
+       name = ctx.label.name,
        data = ctx.files.srcs,
        entry_point = "@npm//:node_modules/jest/bin/jest.js",
        node_modules = "@npm//:node_modules",
