@@ -1,4 +1,6 @@
 
+load("@rules_jest//:ts_jest_test.bzl", "ts_jest_test")
+
 def _impl(ctx):
     nodejs_test(
        name = ctx.attr.name,
