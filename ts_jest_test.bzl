@@ -1,9 +1,11 @@
 
 def _impl(ctx):
-    ctx.actions.run(
-        outputs = [],
-        executable = ctx.executable.jest,
-        arguments = []
+    nodejs_test(
+       name = ctx.attr.name,
+       data = ctx.files.srcs,
+       entry_point = "@npm//:node_modules/jest/bin/jest.js",
+       node_modules = "@npm//:node_modules",
+       install_source_map_support = False
     )
 
 ts_jest_test = rule(
