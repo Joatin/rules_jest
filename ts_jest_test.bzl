@@ -2,7 +2,7 @@
 def _impl(ctx):
     ctx.actions.run(
         outputs = [],
-        executable = ctx.attr.jest,
+        executable = ctx.executable.jest,
         arguments = []
     )
 
