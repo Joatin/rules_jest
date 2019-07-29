@@ -1,1 +1,3 @@
 # Some message
+
+exports_files(["jest.config.js"])
