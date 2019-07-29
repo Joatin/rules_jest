@@ -9,7 +9,7 @@ ts_jest_test = rule(
     implementation = _impl,
     attrs = {
         "srcs": attr.label_list(allow_files = True),
-        "jest": attr.label(default = "@npm//jest/bin/jest")
+        "jest": attr.label(default = "@npm//jest/bin:jest")
     },
     test = True,
 )
